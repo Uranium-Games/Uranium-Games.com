@@ -31,6 +31,7 @@ header {
         transition: all 1.5s;
         cursor: pointer;
         margin-top: 12px;
+        transition: 2s;
         &:hover {
             transform: scale(1.3);
         }

@@ -173,6 +173,7 @@ footer {
     .fa-youtube {
         color: red;
         font-size: 3rem;
+        text-shadow: 4px 4px 5px rgb(0, 0, 0);
     }
 
     .fa-instagram {
@@ -180,6 +181,12 @@ footer {
         background-clip: text;
         -webkit-background-clip: text;
         background-image: linear-gradient(90deg, rgba(112, 40, 184, 1) 0%, rgba(255, 175, 0, 1) 100%);
+        font-size: 3rem;
+        text-shadow: 2px 2px 5px rgb(143, 12, 195);
+    }
+    .fa-discord {
+        color: rgb(85,98,234);
+        text-shadow: 4px 4px 5px rgb(0, 0, 0);
         font-size: 3rem;
     }
 

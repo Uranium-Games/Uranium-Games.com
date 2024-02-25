@@ -14,10 +14,68 @@ body {
     height: 100vh;
     width: 100%;
     background-color: rgb(40, 40, 40);
+    scrollbar-color: rgb(0, 255, 0) white;
+}
+
+/* Global */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Fond */
+*::-webkit-scrollbar-track {
+    position: relative;
+    box-shadow: inset -5px 0 0 1px rgb(0, 0, 0), inset -9px 0 0 1px rgb(0, 0, 0);
+}
+
+/* Ascenseur */
+*::-webkit-scrollbar-thumb {
+    background: rgb(0, 255, 0);
+    border-radius: 8px;
+    border: 3px rgba(0, 0, 0) solid;
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, .45), inset 0 0 5px 2px rgba(255, 255, 255, .4);
+    transition: ease-in 2s;
+}
+
+/* Ascenseur */
+*::-webkit-scrollbar-thumb:hover {
+    background: rgb(15, 57, 2);
+}
+
+/*Angle*/
+*::-webkit-scrollbar-corner {
+    background: rgb(0, 255, 0);
+}
+
+/* Boutons */
+*::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 20px;
+    width: 16px;
+}
+
+/* Haut */
+*::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 8px 12px 8px;
+    border-color: transparent transparent rgba(0, 255, 0) transparent;
+}
+
+*::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    border-color: transparent transparent rgba(0, 0, 0) transparent;
+}
+
+/* Bas */
+*::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 12px 8px 0 8px;
+    border-color: rgba(0, 255, 0) transparent transparent transparent;
+}
+
+*::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    border-color: rgba(0, 0, 0) transparent transparent transparent;
 }
 
 header {
-    position:fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +91,7 @@ header {
         cursor: pointer;
         margin-top: 12px;
         transition: 2s;
+
         &:hover {
             transform: scale(1.3);
         }
@@ -122,6 +181,8 @@ footer {
         text-shadow: 4px 4px 5px rgb(23, 185, 226);
         max-height: 72%;
         margin-right: 130px;
+        transition: scale(1);
+        transition: 1s;
 
         &:hover {
             transition: 1s;
@@ -168,7 +229,7 @@ footer {
         height: 50%;
         font-size: 1.5rem;
         margin-right: 2%;
-        
+
     }
 
     .fa-youtube {
@@ -185,8 +246,9 @@ footer {
         font-size: 3rem;
         text-shadow: 2px 2px 5px rgb(143, 12, 195);
     }
+
     .fa-discord {
-        color: rgb(85,98,234);
+        color: rgb(85, 98, 234);
         text-shadow: 4px 4px 5px rgb(0, 0, 0);
         font-size: 3rem;
     }
@@ -194,11 +256,12 @@ footer {
     a {
         text-decoration: none;
         color: white;
-        
+        transform: scale(1);
+        transition: 0.5s ;
         &:hover {
             color: rgb(0, 0, 0);
             transform: scale(1.5);
-            transition: 0.5s ease-in-out;
+            transition: 0.5s ;
         }
     }
 
@@ -214,10 +277,12 @@ footer {
 
         a {
             font-size: 1.3rem;
+            transform: scale(1);
+            transition: 0.5s ;
             &:hover {
                 color: rgb(0, 0, 0);
                 transform: scale(1.5);
-                transition: 0.5s;
+                transition: 0.5s ;
             }
         }
 
@@ -243,10 +308,12 @@ footer {
 
         a {
             font-size: 1.3rem;
+            transform: scale(1);
+            transition: 0.5s ;
             &:hover {
                 color: rgb(0, 0, 0);
                 transform: scale(1.5);
-                transition: 0.5s;
+                transition: 0.5s ;
             }
         }
     }

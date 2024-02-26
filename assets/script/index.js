@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const channelID = "UCdvjlt9XT-158yQhlIP1XOg";
-const apiKey = process.env.YOUTUBE_API_KEY; // Récupérer la clé API depuis les variables d'environnement
+const apiKey = {{ secrets.YOUR_API_KEY }}; // Récupérer la clé API depuis les variables d'environnement
 
 fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
 .then(response => response.json())

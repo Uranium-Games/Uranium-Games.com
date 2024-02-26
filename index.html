@@ -148,7 +148,7 @@
         // Fonction pour charger la clé API à partir du fichier config.json
         async function loadAPIKey() {
             try {
-                const response = await fetch('config.json');
+                const response = await fetch('https://raw.githubusercontent.com/Uranium-Games/api/30eb8a0cb3f04c45a25fcafc09cf30adf8057f6f/config.json?token=GHSAT0AAAAAACOWQCTNRQ7NXSP5NNKXOIUCZO5CNSQ');
                 const data = await response.json();
                 return data.apiKey;
             } catch (error) {
@@ -156,7 +156,7 @@
                 return null;
             }
         }
-
+    
         // Fonction pour charger la dernière vidéo à partir de la chaîne YouTube
         async function loadLatestVideo() {
             try {
@@ -165,22 +165,25 @@
                     console.error('Clé API non disponible');
                     return;
                 }
-
+    
                 const channelID = "UCdvjlt9XT-158yQhlIP1XOg";
                 const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`);
                 const data = await response.json();
                 const videoId = data.items[0].id.videoId;
-
+    
                 // Insérez ici le code pour afficher la dernière vidéo
+                const latestVideoEmbed = document.getElementById('latest-video-embed');
+                latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 console.log('ID de la dernière vidéo :', videoId);
             } catch (error) {
                 console.error('Erreur lors du chargement de la dernière vidéo :', error);
             }
         }
-
+    
         // Appel de la fonction pour charger la dernière vidéo
         loadLatestVideo();
     </script>
+    
 
 </body>
 <footer>

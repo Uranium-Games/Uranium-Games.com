@@ -148,7 +148,7 @@
         // Fonction pour charger la clé API à partir du fichier config.json
         async function loadAPIKey() {
             try {
-                const response = await fetch('https://raw.githubusercontent.com/Uranium-Games/api/30eb8a0cb3f04c45a25fcafc09cf30adf8057f6f/config.json?token=GHSAT0AAAAAACOWQCTNRQ7NXSP5NNKXOIUCZO5CNSQ');
+                const response = await fetch('https://firebasestorage.googleapis.com/v0/b/youtubeapi-415517.appspot.com/o/config.json?alt=media&token=a4bff1d2-149d-4f52-ba41-cbba27041358');
                 const data = await response.json();
                 return data.apiKey;
             } catch (error) {

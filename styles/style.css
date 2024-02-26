@@ -234,8 +234,7 @@ main {
     .announcements,
     .contests,
     .weekly-calendar,
-    .partnerships,
-    .special-message {
+    .partnerships {
         padding: 30px 0;
     }
 
@@ -262,6 +261,7 @@ main {
     }
     .special-message{
         margin-bottom: 5%;
+        padding: 30px 0;
     }
     
 }

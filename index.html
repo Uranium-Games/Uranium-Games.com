@@ -143,21 +143,6 @@
             </div>
         </section>
     </main>
-
-    <!-- Script pour récupérer la dernière vidéo de la chaîne -->
-    <script>
-        const channelID = "UCdvjlt9XT-158yQhlIP1XOg";
-        const apiKey = "process.env.YOUTUBE_API_KEY";
-
-        fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
-            .then(response => response.json())
-            .then(data => {
-                const latestVideoEmbed = document.getElementById('latest-video-embed');
-                const videoId = data.items[0].id.videoId;
-                latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            })
-            .catch(err => console.error('Erreur lors de la récupération de la dernière vidéo :', err));
-    </script>
 </body>
 <footer>
     <div class="ContainerLink">

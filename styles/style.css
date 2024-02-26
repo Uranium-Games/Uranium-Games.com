@@ -7,7 +7,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Permanent Marker", cursive; /* Correction de l'orthographe de Permanent Marker */
+    font-family: "Permanent Marker", cursive;
     box-sizing: border-box;
 }
 
@@ -21,24 +21,24 @@ body {
     padding: 0;
 }
 .music-playlist {
-    display: flex; /* Utilisation de Flexbox pour le centrage */
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
-    height: 70vh; /* Hauteur à 100% de la hauteur de la fenêtre */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
 }
 
 .music-playlist embed {
-    max-width: 100%; /* Assurez-vous que l'élément embed ne dépasse pas la largeur de son conteneur */
+    max-width: 100%; 
 }
 .latest-video {
-    display: flex; /* Utilisation de Flexbox pour le centrage */
-    justify-content: center; /* Centrage horizontal */
-    align-items: center; /* Centrage vertical */
-    height: 70vh; /* Hauteur à 100% de la hauteur de la fenêtre */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
 }
 
 .latest-video embed {
-    max-width: 100%; /* Assurez-vous que l'élément embed ne dépasse pas la largeur de son conteneur */
+    max-width: 100%; 
 }
 
 
@@ -157,11 +157,6 @@ nav {
             height: 70px;
             width: 6px;
             background-color: white;
-            /* font-weight: bold;
-            font-stretch: extra-expanded;
-            font-family: Arial, Helvetica, sans-serif;
-            border-right: 6px white solid;
-            padding-right: 10px; */
             transform: rotate(40deg);
         }
 
@@ -170,8 +165,6 @@ nav {
             font-size: 30px;
             text-decoration: none;
             cursor: pointer;
-
-            /* margin-top: 5px; */
             &:hover {
                 color: rgb(255, 255, 255);
                 text-shadow: 4px 4px 5px rgb(0, 0, 0);
@@ -227,7 +220,6 @@ main {
         text-decoration: underline;
     }
 
-    /* Main Content styles */
     main {
         padding: 20px 0;
     }
@@ -247,7 +239,6 @@ main {
         padding: 30px 0;
     }
 
-    /* Table styles */
     table {
         width: 100%;
         color: black;

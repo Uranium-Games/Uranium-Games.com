@@ -1,0 +1,27 @@
+name: Fetch Latest YouTube Video
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  fetch-video:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run script
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUR_API_KEY }} # Utilisation de la clé API YouTube depuis les secrets de votre dépôt GitHub
+      run: node /index.js

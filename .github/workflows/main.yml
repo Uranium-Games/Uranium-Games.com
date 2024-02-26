@@ -24,4 +24,4 @@ jobs:
     - name: Run script
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUR_API_KEY }} # Utilisation de la clé API YouTube depuis les secrets de votre dépôt GitHub
-      run: node /index.js
+      run: node /assets/script/index.js

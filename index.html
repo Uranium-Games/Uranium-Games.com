@@ -139,7 +139,7 @@
     <!-- Script pour récupérer la dernière vidéo de la chaîne -->
     <script>
         const channelID = "UCdvjlt9XT-158yQhlIP1XOg";
-        const apiKey = "AIzaSyA6P-XLx1Ksc0w2G-f1c0nTUt53eSHcDcw";
+        const apiKey = "process.env.YOUTUBE_API_KEY";
 
         fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
         .then(response => response.json())

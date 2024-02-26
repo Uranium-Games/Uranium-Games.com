@@ -17,7 +17,7 @@
     <div class="banniere"></div>
     <header>
         <a href="https://uranium-games.github.io/Uranium-Games.com/index.html">
-            <img src="./assets/logo/Uranium_logo.png" alt="Uranium_logo" class="Uranium_logo" id="UraniumGames"/>
+            <img src="./assets/logo/Uranium_logo.png" alt="Uranium_logo" class="Uranium_logo" id="UraniumGames" />
             <h1>
                 <span class="Hcolorshadowchange">Uranium_Games</span>
             </h1>
@@ -46,7 +46,8 @@
         <section class="welcome-section">
             <div class="container">
                 <h1>Bienvenue sur le site d'Uranium Games</h1>
-                <p>Nous sommes ravis de vous accueillir sur notre plateforme. Découvrez ci-dessous nos dernières annonces, concours, partenariats et bien plus encore !</p>
+                <p>Nous sommes ravis de vous accueillir sur notre plateforme. Découvrez ci-dessous nos dernières
+                    annonces, concours, partenariats et bien plus encore !</p>
             </div>
         </section>
 
@@ -76,15 +77,20 @@
             <div class="container">
                 <h2>Playlist de Musique</h2>
                 <!-- L'embed de la playlist de musique -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMGp2IssWOtAPoLxLd0N_PGb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMGp2IssWOtAPoLxLd0N_PGb"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </section>
 
-        <section hidden class="weekly-calendar" >
-            <div class="container"  type="hidden">
+        <section hidden class="weekly-calendar">
+            <div class="container" type="hidden">
                 <h2>Calendrier de la Semaine</h2>
                 <!-- Lien vers le calendrier complet -->
-                <p>Consultez notre <a href="https://uranium-games.github.io/Uranium-Games.com/calendrier.html" target="_blank" rel="noopener noreferrer">calendrier complet</a> pour plus de détails.</p>
+                <p>Consultez notre <a href="https://uranium-games.github.io/Uranium-Games.com/calendrier.html"
+                        target="_blank" rel="noopener noreferrer">calendrier complet</a> pour plus de détails.</p>
                 <!-- Calendrier simple -->
                 <table border="1">
                     <thead>
@@ -124,14 +130,16 @@
         <section class="partnerships">
             <div class="container">
                 <h2>Partenariats</h2>
-                <p>Aucun partenariat en cours. Pour toute proposition de partenariat, veuillez nous contacter par <a href="mailto:Uranium_GamesYT@outlook.fr">e-mail</a>.<br>Partenariat Rémunéré uniquement.</p>
+                <p>Aucun partenariat en cours. Pour toute proposition de partenariat, veuillez nous contacter par <a
+                        href="mailto:Uranium_GamesYT@outlook.fr">e-mail</a>.<br>Partenariat Rémunéré uniquement.</p>
             </div>
         </section>
 
         <section class="special-message">
             <div class="container">
                 <h2>Message Spécial</h2>
-                <p>Merci de me suivre depuis toutes ces années ! Tout a commencé en 2017 et je ne sais pas comment vous remercier. Juste MERCI <span style="color: red;">❤️</span></p>
+                <p>Merci de me suivre depuis toutes ces années ! Tout a commencé en 2017 et je ne sais pas comment vous
+                    remercier. Juste MERCI <span style="color: red;">❤️</span></p>
             </div>
         </section>
     </main>
@@ -142,19 +150,19 @@
         const apiKey = "process.env.YOUTUBE_API_KEY";
 
         fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
-        .then(response => response.json())
-        .then(data => {
-            const latestVideoEmbed = document.getElementById('latest-video-embed');
-            const videoId = data.items[0].id.videoId;
-            latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        })
-        .catch(err => console.error('Erreur lors de la récupération de la dernière vidéo :', err));
+            .then(response => response.json())
+            .then(data => {
+                const latestVideoEmbed = document.getElementById('latest-video-embed');
+                const videoId = data.items[0].id.videoId;
+                latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            })
+            .catch(err => console.error('Erreur lors de la récupération de la dernière vidéo :', err));
     </script>
 </body>
 <footer>
     <div class="ContainerLink">
         <h3>Contact :</h3>
-        <br> 
+        <br>
         <a href="https://www.youtube.com/@UraniumGames"><i class="fa-brands fa-youtube"></i></a>
         <br>
         <a href="https://www.instagram.com/uranium_games_ytboffi/"><i class="fa-brands fa-instagram"></i></a>
@@ -163,7 +171,7 @@
     </div>
     <div class="pagesSite">
         <h4>Pages :</h4>
-        <br class="pagesSiteFooter"> 
+        <br class="pagesSiteFooter">
         <a href="https://uranium-games.github.io/Uranium-Games/index.html">Accueil</a>
         <a href="https://uranium-games.github.io/Uranium-Games.com/about-me.html">À propos</a>
         <a href="https://uranium-games.github.io/Uranium-Games.com/faq.html">F.A.Q.</a>
@@ -177,11 +185,16 @@
         <a href="https://uranium-games.github.io/Uranium-Games.com/jeux.html">Fun & Jeux</a>
     </div>
     <div class="logoFooter">
-        <a href="https://uranium-games.github.io/Uranium-Games.com/index.html"><img src="./assets/logo/Uranium_logo.png" alt="Uranium_logo" id="imgFooter"></a> 
+        <a href="https://uranium-games.github.io/Uranium-Games.com/index.html"><img src="./assets/logo/Uranium_logo.png"
+                alt="Uranium_logo" id="imgFooter"></a>
         <h5>Uranium_Games</h5>
     </div>
     <div class="creditsCopyright">
-        <p>&copy; <script language= JavaScript type= text/JavaScript>affiche_annee();</script> <a href=https://www.youtube.com/@UraniumGames>Uranium_Games</a>, tous droits réservés. Site hébérgé grâce à GitHub</p>
+        <p>&copy;
+            <script language=JavaScript type=text/JavaScript>affiche_annee();</script> <a
+                href=https://www.youtube.com/@UraniumGames>Uranium_Games</a>, tous droits réservés. Site hébérgé grâce à
+            GitHub
+        </p>
     </div>
 </footer>
 

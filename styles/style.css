@@ -7,15 +7,40 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Permanent Maker, cursive;
+    font-family: "Permanent Marker", cursive; /* Correction de l'orthographe de Permanent Marker */
+    box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
+    height: 150vh;
     width: 100%;
-    background-color: rgb(40, 40, 40);
-    scrollbar-color: rgb(0, 255, 0) white;
+    background-color: rgb(40,40,40);
+    scrollbar-color: rgb(0, 255, 0);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
+.music-playlist {
+    display: flex; /* Utilisation de Flexbox pour le centrage */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 70vh; /* Hauteur à 100% de la hauteur de la fenêtre */
+}
+
+.music-playlist embed {
+    max-width: 100%; /* Assurez-vous que l'élément embed ne dépasse pas la largeur de son conteneur */
+}
+.latest-video {
+    display: flex; /* Utilisation de Flexbox pour le centrage */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 70vh; /* Hauteur à 100% de la hauteur de la fenêtre */
+}
+
+.latest-video embed {
+    max-width: 100%; /* Assurez-vous que l'élément embed ne dépasse pas la largeur de son conteneur */
+}
+
 
 /* Global */
 *::-webkit-scrollbar {
@@ -108,7 +133,7 @@ header {
     .Hcolorshadowchange {
         color: rgb(25, 206, 19);
         text-shadow: 4px 4px 5px rgb(23, 185, 226);
-        -webkit-text-stroke: 2px black;
+        -webkit-text-stroke: 1px black;
         /* Contour de 1 pixel en noir pour les navigateurs WebKit */
     }
 }
@@ -164,11 +189,109 @@ nav {
 }
 
 main {
-    height: 120%;
+    color: rgba(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+        border-radius: 20px;
+        border: 1px white solid;
+    }
+
+    h1,
+    h2 {
+        margin-bottom: 20px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: 100;
+        
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Main Content styles */
+    main {
+        padding: 20px 0;
+    }
+
+    .welcome-section {
+        display: flex;
+        align-items: center;
+        background-color: rgb(40,40,40);
+        padding: 50px 0;
+    }
+
+    .announcements,
+    .contests,
+    .weekly-calendar,
+    .partnerships,
+    .special-message {
+        padding: 30px 0;
+    }
+
+    /* Table styles */
+    table {
+        width: 100%;
+        color: black;
+        border-collapse: collapse;
+    }
+    
+    table, th, td {
+        border: 1px solid #ddd;
+        color: white;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        
+    }
+    
+    th {
+        background-color: #f2f2f2;
+        color: black;
+    }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
 
 footer {
-    height: 55%;
+    height: 38%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -257,11 +380,12 @@ footer {
         text-decoration: none;
         color: white;
         transform: scale(1);
-        transition: 0.5s ;
+        transition: 0.5s;
+
         &:hover {
             color: rgb(0, 0, 0);
             transform: scale(1.5);
-            transition: 0.5s ;
+            transition: 0.5s;
         }
     }
 
@@ -278,11 +402,12 @@ footer {
         a {
             font-size: 1.3rem;
             transform: scale(1);
-            transition: 0.5s ;
+            transition: 0.5s;
+
             &:hover {
                 color: rgb(0, 0, 0);
                 transform: scale(1.5);
-                transition: 0.5s ;
+                transition: 0.5s;
             }
         }
 
@@ -309,11 +434,12 @@ footer {
         a {
             font-size: 1.3rem;
             transform: scale(1);
-            transition: 0.5s ;
+            transition: 0.5s;
+
             &:hover {
                 color: rgb(0, 0, 0);
                 transform: scale(1.5);
-                transition: 0.5s ;
+                transition: 0.5s;
             }
         }
     }

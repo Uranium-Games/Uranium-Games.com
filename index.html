@@ -143,20 +143,36 @@
             </div>
         </section>
     </main>
+    <script type="application/json">
+        {
+            "apiKey": "AIzaSyA6P-XLx1Ksc0w2G-f1c0nTUt53eSHcDcw"
+        }
+    </script>
+
+    <!-- Script JavaScript pour récupérer et utiliser la clé API -->
     <script>
         const channelID = "UCdvjlt9XT-158yQhlIP1XOg";
-        let apiKey;
+        let apiKey = null;
 
-        fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
-            .then(response => response.json())
-            .then(data => {
-                const latestVideoEmbed = document.getElementById('latest-video-embed');
-                const videoId = data.items[0].id.videoId;
-                latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            })
-            .catch(err => console.error('Erreur lors de la récupération de la dernière vidéo :', err));
+        // Récupérer la clé API depuis la balise de script
+        const apiKeyScript = document.querySelector('script[type="application/json"]');
+        if (apiKeyScript) {
+            const apiKeyData = JSON.parse(apiKeyScript.textContent.trim());
+            apiKey = apiKeyData.apiKey;
+        }
 
-
+        if (apiKey) {
+            fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
+                .then(response => response.json())
+                .then(data => {
+                    const latestVideoEmbed = document.getElementById('latest-video-embed');
+                    const videoId = data.items[0].id.videoId;
+                    latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                })
+                .catch(err => console.error('Erreur lors de la récupération de la dernière vidéo :', err));
+        } else {
+            console.error("La clé API n'a pas été trouvée.");
+        }
     </script>
 </body>
 <footer>

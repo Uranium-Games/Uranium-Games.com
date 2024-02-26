@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/fcec5ee4d5.js" crossorigin="anonymous"></script>
-    <script src="assets/script/index.js"></script>
+    <script src="https://uranium-games.github.io/Uranium-Games.com/assets/script/index.js"></script>
     <meta charset="utf-8" />
 </head>
 
@@ -143,6 +143,20 @@
             </div>
         </section>
     </main>
+    <script>
+        const channelID = "UCdvjlt9XT-158yQhlIP1XOg";
+        const apiKey = ${{ secrets.YOUR_API_KEY }}; // Récupérer la clé API depuis les variables d'environnement
+
+        fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelID}&part=snippet,id&order=date&maxResults=1`)
+            .then(response => response.json())
+            .then(data => {
+                const latestVideoEmbed = document.getElementById('latest-video-embed');
+                const videoId = data.items[0].id.videoId;
+                latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            })
+            .catch(err => console.error('Erreur lors de la récupération de la dernière vidéo :', err));
+
+    </script>
 </body>
 <footer>
     <div class="ContainerLink">

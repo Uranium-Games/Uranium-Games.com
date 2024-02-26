@@ -172,7 +172,7 @@
                 const videoId = data.items[0].id.videoId;
     
                 // Insérez ici le code pour afficher la dernière vidéo
-                const latestVideoEmbed = document.getElementById('latest-video-embed');
+                const latestVideoEmbed = document.querySelector('.latest-video-embed');
                 latestVideoEmbed.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 console.log('ID de la dernière vidéo :', videoId);
             } catch (error) {
@@ -183,7 +183,6 @@
         // Appel de la fonction pour charger la dernière vidéo
         loadLatestVideo();
     </script>
-    
 
 </body>
 <footer>

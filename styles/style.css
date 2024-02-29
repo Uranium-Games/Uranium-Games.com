@@ -154,7 +154,7 @@ nav {
         align-items: center;
 
         .separationWish {
-            height: 66px;
+            height: 65px;
             width: 6px;
             background-color: white;
             transform: rotate(40deg);

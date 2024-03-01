@@ -11,12 +11,147 @@
     <script src="https://kit.fontawesome.com/fcec5ee4d5.js" crossorigin="anonymous"></script>
     <script src="assets/script/index.js"></script>
     <meta charset="utf-8" />
+    <style>
+        main {
+            align-items: center;
+        }
+
+        .presentationPagesVideos {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            border: 1px white solid;
+            border-radius: 20px;
+            align-items: center;
+            p {
+                display: flex;
+                align-content: center;
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+        }
+
+        #uploads-playlist {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            margin-top: 70px;
+
+            .uploadsIframe {
+                border-radius: 20px;
+                margin: 20px 50px 50px 50px;
+            }
+        }
+
+        .playlist-container {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            align-items: center;
+            margin-top: 50px;
+
+            /* Style pour les autres playlists */
+            .autresPlaylists {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                margin-bottom: 20px;
+                font-size: 24px;
+                padding-inline: initial;
+                align-items: center;
+                justify-content: center;
+                .playlists {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 3%;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    border: 1px white solid;
+                    border-radius: 20px;
+
+                    .playlist-iframe {
+                        border-radius: 20px 20px 20px 20px;
+                    }
+                }
+
+                .playlist-title {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    /* Espace entre le titre et l'iframe */
+                }
+            }
+        }
+        #videos-without-playlist {
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            align-items: center;
+            margin-top: 50px;
+
+            /* Style pour les autres playlists */
+            .sansPlaylist {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                margin-bottom: 20px;
+                font-size: 24px;
+                padding-inline: initial;
+                align-items: center;
+                justify-content: center;
+                .videos {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 3%;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    border: 1px white solid;
+                    border-radius: 20px;
+
+                    .videos-iframe {
+                        border-radius: 20px 20px 20px 20px;
+                    }
+                }
+
+            }
+        }
+        .mesMusiques{
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 100px;
+            border-radius: 20px;
+            align-items: center;
+            margin-top: 50px;
+            .musiquesContainer{
+                display: flex;
+                    flex-direction: column;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    .musiques-Iframe{
+                        border-radius: 20px 20px 20px 20px;
+                        border: 1px white solid;
+                        border-radius: 20px;
+                        
+                    }
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <a href="https://uranium-games.github.io/Uranium-Games.com/index.html">
-            <img src="./assets/logo/Uranium_logo.png" alt="Uranium_logo" class="Uranium_logo" id="UraniumGames"/>
+            <img src="./assets/logo/Uranium_logo.png" alt="Uranium_logo" class="Uranium_logo" id="UraniumGames" />
             <h1>
                 <span class="Hcolorshadowchange">Uranium_Games</span>
             </h1>
@@ -42,13 +177,157 @@
         </nav>
     </header>
     <main>
-        <h2>videos</h2>
+        <div class="presentationPagesVideos">
+            <h2>Mes vidéos</h2>
+            <p>Découvrez ici toute les contenus de ma chaîne via differentes playlists. 
+                Je vous propose une variété de contenus passionnants, allant des vidéos de gameplay aux tutoriels en passant par 
+                les vlogs et les annonces exclusives. Effectivement certaines de mes vidéos n'ont pas de playlist,
+                c'est pourquoi vous retrouverez une catégorie spéciale "vidéos sans playlists". Vous retrouverez aussi mes oeuvres musicales.
+                Bonne visite ❤️
+            </p>
+        </div>
+        <!-- Div pour la playlist "uploads" triée par publication récente -->
+        <div id="uploads-playlist">
+            <h2>Vidéos de ma chaînes</h2>
+            <p>De la plus récente à la plus ancienne sous forme de playlist !</p>
+            <!-- Playlist "Uploads" triée par publication récente -->
+            <iframe class="uploadsIframe" width="640" height="360"
+                src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMFJjpLWyo8DRBXRtG4VTjk6&sort=dd"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- Div pour d'autres playlists -->
+        <div class="playlist-container">
+            <h2>Autres playlists</h2>
+            <p>Séries actives ou alors Terminées (pas celle abandonnées)</p>
+            <div class="autresPlaylists">
+                <div class="playlists">
+                    <h2 class="playlist-title">Unfinished Modded Madness</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMEp71P0E1J01V0U-TNulXHx"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Urapoint - Faisons le point !</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMGfvdGeVvMSd0Pgc2XtyPHJ"
+                        frameborder="0" allowfullscreen></iframe>
+
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Let's Play - Portal Stories Mel</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMGuvPBlPuyjFn4g__5Y_OrO"
+                        frameborder="0" allowfullscreen></iframe>
+
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Minecraft - Doctor Who</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMGawlJ26V9wuGe4psoKKe3D"
+                        frameborder="0" allowfullscreen></iframe>
+
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Let's Play - Half-Life 2</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMG6j5kB-OpUP_5qsfi7-gAC"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">La Potion Dimensionnelle - Bigre</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMH8baRQgIK4si7s3prVYROI"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Let's Play - Portal 1</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMFkB4aHeg48wcvYwwDcKXwb"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Minecraft - Manhattan Project</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMH0Y7o8uknTOWX9AGicBJK8"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Minecraft - The Stephen's Case</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMEhfqfoE_ujQLyRDW1tpeU2"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Mini jeux à la cons</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMEg1CW1nQcXMb3QX-u5oHTa"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Let's Play - Portal 2</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMEpbrCoDx-hitNQAyOVIOwJ"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="playlists">
+                    <h2 class="playlist-title">Jeu Tu Préféres</h2>
+                    <iframe class="playlist-iframe" width="276" height="164"
+                        src="https://www.youtube.com/embed/videoseries?list=PL_L20a6mgKMHbV_X0QqUxQjxDh9tAcTGY"
+                        frameborder="0" allowfullscreen></iframe>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Div pour les vidéos sans playlist -->
+        <div id="videos-without-playlist">
+            <h2>Vidéos sans playlist :</h2>
+            <div class="sansPlaylist">
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/ozIrtAhNVho" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/uc-82ujiHDs" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/L4LMu9FsRXQ" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/HdzLJARmg_I" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/fUiY8PBtTZ4" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/6cAxlNUHwZI" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="videosContainer">
+                    <iframe class="videos" width="276" height="164" src="https://www.youtube.com/embed/-TYxHWy-XHs" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="mesMusiques">
+            <h2>Mes Oeuvres musicales</h2>
+            <div class="musiquesContainer">
+                <iframe class="musiques-Iframe" width="276" height="164" src="https://www.youtube.com/embed/QX8OmZwiOyY" frameborder="0"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
     </main>
 </body>
 <footer>
     <div class="ContainerLink">
         <h3>Contact :</h3>
-        <br> 
+        <br>
         <a href="https://www.youtube.com/@UraniumGames"><i class="fa-brands fa-youtube"></i></a>
         <br>
         <a href="https://www.instagram.com/uranium_games_ytboffi/"><i class="fa-brands fa-instagram"></i></a>
@@ -57,7 +336,7 @@
     </div>
     <div class="pagesSite">
         <h4>Pages :</h4>
-        <br class="pagesSiteFooter"> 
+        <br class="pagesSiteFooter">
         <a href="https://uranium-games.github.io/Uranium-Games.com/index.html">Accueil</a>
         <a href="https://uranium-games.github.io/Uranium-Games.com/about-me.html">À propos</a>
         <a href="https://uranium-games.github.io/Uranium-Games.com/faq.html">F.A.Q.</a>
@@ -71,11 +350,16 @@
         <a href="https://uranium-games.github.io/Uranium-Games.com/jeux.html">Fun & Jeux</a>
     </div>
     <div class="logoFooter">
-        <a href="https://uranium-games.github.io/Uranium-Games.com/index.html"><img src="./assets/logo/Uranium_logo.png" alt="Uranium_logo" id="imgFooter"></a> 
+        <a href="https://uranium-games.github.io/Uranium-Games.com/index.html"><img src="./assets/logo/Uranium_logo.png"
+                alt="Uranium_logo" id="imgFooter"></a>
         <h5>Uranium_Games</h5>
     </div>
     <div class="creditsCopyright">
-        <p>&copy; <script language= JavaScript type= text/JavaScript>affiche_annee();</script> <a href=https://www.youtube.com/@UraniumGames>Uranium_Games</a>, tous droits réservés. Site hébérgé grâce à GitHub</p>
+        <p>&copy;
+            <script language=JavaScript type=text/JavaScript>affiche_annee();</script> <a
+                href=https://www.youtube.com/@UraniumGames>Uranium_Games</a>, tous droits réservés. Site hébérgé grâce à
+            GitHub
+        </p>
     </div>
 </footer>
 

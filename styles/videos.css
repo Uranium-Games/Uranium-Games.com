@@ -1,0 +1,135 @@
+
+
+.presentationPagesVideos {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: 1px white solid;
+    border-radius: 20px;
+    align-items: center;
+    align-self: center;
+    p {
+        display: flex;
+        align-content: center;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
+#uploads-playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+
+    .uploadsIframe {
+        border-radius: 20px;
+        margin: 20px 50px 50px 50px;
+    }
+}
+
+.playlist-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 50px;
+    align-self: center;
+
+    /* Style pour les autres playlists */
+    .autresPlaylists {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 20px;
+        font-size: 24px;
+        padding-inline: initial;
+        align-items: center;
+        justify-content: center;
+        .playlists {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3%;
+            margin-right: 10px;
+            margin-left: 10px;
+            border: 1px white solid;
+            border-radius: 20px;
+
+            .playlist-iframe {
+                border-radius: 20px 20px 20px 20px;
+            }
+        }
+
+        .playlist-title {
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            /* Espace entre le titre et l'iframe */
+        }
+    }
+}
+#videos-without-playlist {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 50px;
+    align-self: center;
+
+    /* Style pour les autres playlists */
+    .sansPlaylist {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 20px;
+        font-size: 24px;
+        padding-inline: initial;
+        align-items: center;
+        justify-content: center;
+        .videos {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3%;
+            margin-right: 10px;
+            margin-left: 10px;
+            border: 1px white solid;
+            border-radius: 20px;
+
+            .videos-iframe {
+                border-radius: 20px 20px 20px 20px;
+            }
+        }
+
+    }
+}
+.mesMusiques{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    border-radius: 20px;
+    align-items: center;
+    align-self: center;
+    margin-top: 50px;
+    .musiquesContainer{
+        display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            margin-left: 10px;
+            .musiques-Iframe{
+                border-radius: 20px 20px 20px 20px;
+                border: 1px white solid;
+                border-radius: 20px;
+                
+            }
+    }
+}

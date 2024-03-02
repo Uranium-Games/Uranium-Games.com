@@ -1,3 +1,7 @@
+@import url(/styles/videos.css);
+@import url(/styles/faq.css);
+
+
 .permanent-marker-regular {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
@@ -14,31 +18,33 @@
 body {
     height: 150vh;
     width: 100%;
-    background-color: rgb(40,40,40);
+    background-color: rgb(40, 40, 40);
     scrollbar-color: rgb(0, 255, 0);
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
+
 .music-playlist {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
 }
 
 .music-playlist embed {
-    max-width: 100%; 
+    max-width: 100%;
 }
+
 .latest-video {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
 }
 
 .latest-video embed {
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 
@@ -165,6 +171,7 @@ nav {
             font-size: 30px;
             text-decoration: none;
             cursor: pointer;
+
             &:hover {
                 color: rgb(255, 255, 255);
                 text-shadow: 4px 4px 5px rgb(0, 0, 0);
@@ -185,7 +192,7 @@ main {
     color: rgba(255, 255, 255);
     display: flex;
     flex-direction: column;
-    
+
     .container {
         display: flex;
         flex-direction: column;
@@ -202,22 +209,21 @@ main {
         margin-bottom: 20px;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-weight: 100;
-        
+
     }
 
     p {
         margin-bottom: 10px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
     }
 
     a {
-        color: #007bff;
+        color: white;
         text-decoration: none;
     }
 
     a:hover {
-        text-decoration: underline;
+        cursor: pointer;
     }
 
     main {
@@ -227,7 +233,7 @@ main {
     .welcome-section {
         display: flex;
         align-items: center;
-        background-color: rgb(40,40,40);
+        background-color: rgb(40, 40, 40);
         padding: 50px 0;
     }
 
@@ -243,27 +249,31 @@ main {
         color: black;
         border-collapse: collapse;
     }
-    
-    table, th, td {
+
+    table,
+    th,
+    td {
         border: 1px solid #ddd;
         color: white;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 8px;
         text-align: left;
-        
+
     }
-    
+
     th {
         background-color: #f2f2f2;
         color: black;
     }
-    .special-message{
+
+    .special-message {
         margin-bottom: 5%;
         padding: 30px 0;
     }
-    
+
 }
 
 /* Media queries */

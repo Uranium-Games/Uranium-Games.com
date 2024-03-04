@@ -1,5 +1,6 @@
-@import url(https://uranium-games.github.io/Uranium-Games.com/styles/videos.css);
-@import url(https://uranium-games.github.io/Uranium-Games.com/styles/faq.css);
+@import url(./videos.css);
+@import url(./faq.css);
+@import url(./index.css);
 
 
 .permanent-marker-regular {
@@ -15,96 +16,20 @@
     box-sizing: border-box;
 }
 
+
 body {
     height: 150vh;
     width: 100%;
-    background-color: rgb(40, 40, 40);
+    background-image: url("/assets/wallpaper/banniere.png");
+    background-size: contain;
     scrollbar-color: rgb(0, 255, 0);
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-.music-playlist {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-}
-
-.music-playlist embed {
-    max-width: 100%;
-}
-
-.latest-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-}
-
-.latest-video embed {
-    max-width: 100%;
-}
 
 
-/* Global */
-*::-webkit-scrollbar {
-    width: 16px;
-}
-
-/* Fond */
-*::-webkit-scrollbar-track {
-    position: relative;
-    box-shadow: inset -5px 0 0 1px rgb(0, 0, 0), inset -9px 0 0 1px rgb(0, 0, 0);
-}
-
-/* Ascenseur */
-*::-webkit-scrollbar-thumb {
-    background: rgb(0, 255, 0);
-    border-radius: 8px;
-    border: 3px rgba(0, 0, 0) solid;
-    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, .45), inset 0 0 5px 2px rgba(255, 255, 255, .4);
-    transition: ease-in 2s;
-}
-
-/* Ascenseur */
-*::-webkit-scrollbar-thumb:hover {
-    background: rgb(15, 57, 2);
-}
-
-/*Angle*/
-*::-webkit-scrollbar-corner {
-    background: rgb(0, 255, 0);
-}
-
-/* Boutons */
-*::-webkit-scrollbar-button:single-button {
-    display: block;
-    border-style: solid;
-    height: 20px;
-    width: 16px;
-}
-
-/* Haut */
-*::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 8px 12px 8px;
-    border-color: transparent transparent rgba(0, 255, 0) transparent;
-}
-
-*::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
-    border-color: transparent transparent rgba(0, 0, 0) transparent;
-}
-
-/* Bas */
-*::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 12px 8px 0 8px;
-    border-color: rgba(0, 255, 0) transparent transparent transparent;
-}
-
-*::-webkit-scrollbar-button:single-button:vertical:increment:hover {
-    border-color: rgba(0, 0, 0) transparent transparent transparent;
-}
 
 header {
     display: flex;
@@ -113,7 +38,7 @@ header {
     justify-content: space-around;
     width: 100%;
     border-bottom: 5px rgb(255, 255, 255) solid;
-
+    
     img {
         height: 80px;
         width: 80px;
@@ -165,7 +90,7 @@ nav {
             background-color: white;
             transform: rotate(40deg);
         }
-
+        
         a {
             color: black;
             font-size: 30px;
@@ -185,96 +110,10 @@ nav {
         }
 
     }
-
+    
 }
 
-main {
-    color: rgba(255, 255, 255);
-    display: flex;
-    flex-direction: column;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 20px;
-        border-radius: 20px;
-        border: 1px white solid;
-    }
-
-    h1,
-    h2 {
-        margin-bottom: 20px;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-weight: 100;
-
-    }
-
-    p {
-        margin-bottom: 10px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-    }
-
-    a {
-        color: white;
-        text-decoration: none;
-    }
-
-    a:hover {
-        cursor: pointer;
-    }
-
-    main {
-        padding: 20px 0;
-    }
-
-    .welcome-section {
-        display: flex;
-        align-items: center;
-        background-color: rgb(40, 40, 40);
-        padding: 50px 0;
-    }
-
-    .announcements,
-    .contests,
-    .weekly-calendar,
-    .partnerships {
-        padding: 30px 0;
-    }
-
-    table {
-        width: 100%;
-        color: black;
-        border-collapse: collapse;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid #ddd;
-        color: white;
-    }
-
-    th,
-    td {
-        padding: 8px;
-        text-align: left;
-
-    }
-
-    th {
-        background-color: #f2f2f2;
-        color: black;
-    }
-
-    .special-message {
-        margin-bottom: 5%;
-        padding: 30px 0;
-    }
-
-}
 
 /* Media queries */
 @media (max-width: 768px) {
@@ -289,7 +128,7 @@ main {
     h2 {
         font-size: 20px;
     }
-
+    
     p {
         font-size: 16px;
     }

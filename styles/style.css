@@ -20,7 +20,7 @@
 body {
     height: 150vh;
     width: 100%;
-    background-image: url("../assets/wallpaper/banniere.png");
+    background-image: url("https://uranium-games.github.io/Uranium-Games.com/assets/wallpaper/banniere.png");
     background-size: contain;
     scrollbar-color: rgb(0, 255, 0);
     line-height: 1.6;
